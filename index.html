@@ -324,60 +324,63 @@ Junpeng Tan*, <b>Yukai Shi</b>, Zhijing Yang, Caizhen Wen, Liang Lin <br />
     <meta charset="UTF-8">
     <title>Alumni List</title>
     <style>
-        /* 全局样式 */
+        /* 全局样式：减少整体留白 */
         body {
             font-family: Arial, sans-serif;
-            padding: 20px;
+            padding: 10px; /* 大幅减少页面边距 */
+            margin: 0;
         }
         h1 {
-            font-size: 1.8em; /* 缩小标题 */
-            margin: 0 0 10px 0;
+            font-size: 1.4em; /* 缩小标题 */
+            margin: 0 0 4px 0; /* 减少标题下方间距 */
             font-weight: bold;
         }
         .note {
-            font-size: 0.7em; /* 缩小备注 */
-            margin: 0 0 20px 0;
+            font-size: 0.65em; /* 更小的备注文字 */
+            margin: 0 0 8px 0; /* 大幅减少间距 */
             color: #333;
         }
 
-        /* 表格样式 —— 整体缩小 */
+        /* 表格：极致紧凑 */
         .alumni-table {
-            width: 85%; /* 缩小表格宽度 */
+            width: 90%;
             border-collapse: collapse;
             border: 1px solid #ccc;
-            font-size: 0.8em; /* 缩小整体字号 */
+            font-size: 0.75em; /* 更小字号 */
         }
         .alumni-table th,
         .alumni-table td {
             border: 1px solid #ccc;
-            padding: 8px 10px; /* 缩小单元格内边距 */
+            padding: 4px 6px; /* 最小化单元格内边距 */
             text-align: center;
             vertical-align: middle;
+            line-height: 1.2; /* 压缩行高 */
         }
         .alumni-table th {
             background-color: #f0f0f0;
             font-weight: bold;
         }
-        /* 姓名链接样式 */
         .alumni-table a {
             color: #0000EE;
             text-decoration: underline;
-            margin-left: 8px;
+            margin-left: 4px; /* 减少名字与头像间距 */
         }
-        /* 头像缩小 */
+
+        /* 头像：更小更紧凑 */
         .avatar {
-            width: 60px;    /* 缩小头像 */
-            height: 60px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             object-fit: cover;
             vertical-align: middle;
         }
-        /* 头像+姓名 布局 */
+
+        /* 头像+姓名：紧凑布局 */
         .name-with-avatar {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 4px; /* 最小间距 */
         }
     </style>
 </head>
