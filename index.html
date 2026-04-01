@@ -324,60 +324,63 @@ Junpeng Tan*, <b>Yukai Shi</b>, Zhijing Yang, Caizhen Wen, Liang Lin <br />
     <meta charset="UTF-8">
     <title>Alumni List</title>
     <style>
-        /* 全局样式 */
+        /* 页面边距完全保持不变 */
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
+            margin: 0;
         }
         h1 {
-            font-size: 1.8em; /* 缩小标题 */
-            margin: 0 0 10px 0;
+            font-size: 1.4em;
+            margin: 0 0 4px 0;
             font-weight: bold;
         }
         .note {
-            font-size: 0.7em; /* 缩小备注 */
-            margin: 0 0 20px 0;
+            font-size: 0.65em;
+            margin: 0 0 8px 0;
             color: #333;
         }
 
-        /* 表格样式 —— 整体缩小 */
+        /* 仅优化表格：更紧凑、更小间距 */
         .alumni-table {
-            width: 85%; /* 缩小表格宽度 */
+            width: 85%;
             border-collapse: collapse;
             border: 1px solid #ccc;
-            font-size: 0.8em; /* 缩小整体字号 */
+            font-size: 0.75em; /* 缩小字体 */
         }
         .alumni-table th,
         .alumni-table td {
             border: 1px solid #ccc;
-            padding: 8px 10px; /* 缩小单元格内边距 */
+            padding: 3px 5px; /* 最小化单元格内边距 */
             text-align: center;
             vertical-align: middle;
+            line-height: 1.2; /* 压缩行高 */
         }
         .alumni-table th {
             background-color: #f0f0f0;
             font-weight: bold;
         }
-        /* 姓名链接样式 */
         .alumni-table a {
             color: #0000EE;
             text-decoration: underline;
-            margin-left: 8px;
+            margin-left: 4px;
         }
+
         /* 头像缩小 */
         .avatar {
-            width: 60px;    /* 缩小头像 */
-            height: 60px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             object-fit: cover;
             vertical-align: middle;
         }
-        /* 头像+姓名 布局 */
+
+        /* 头像+姓名紧凑布局 */
         .name-with-avatar {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 4px;
         }
     </style>
 </head>
