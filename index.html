@@ -320,14 +320,14 @@ Junpeng Tan*, <b>Yukai Shi</b>, Zhijing Yang, Caizhen Wen, Liang Lin <br />
 </li>
 </ul>
 
-<!-- 优化后 Alumni 板块：头像放大，内容紧凑 -->
+<!-- 优化后 Alumni 板块：宽度收窄 | 居中不顶格 | 头像单列 -->
 <style>
 .alumni-table {
-    width: 98%;
+    width: 80%; /* 压扁宽度，不顶格 */
+    margin: 0 auto 10px auto; /* 居中 + 小间距 */
     border-collapse: collapse;
     border: 1px solid #ccc;
     font-size: 0.7em;
-    margin: 0 0 8px 0;
 }
 .alumni-table th,
 .alumni-table td {
@@ -344,132 +344,124 @@ Junpeng Tan*, <b>Yukai Shi</b>, Zhijing Yang, Caizhen Wen, Liang Lin <br />
 .alumni-table a {
     color: #0000EE;
     text-decoration: underline;
-    margin-left: 3px;
 }
 .avatar {
-    width: 40px;    /* 头像放大 */
+    width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    vertical-align: middle;
+    display: block;
+    margin: 0 auto;
 }
-.name-with-avatar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
+.alumni-combo {
+    text-align: center;
+    line-height: 1.2;
+}
+.alumni-year {
+    color: #555;
+    margin: 0 4px;
 }
 .alumni-note {
     font-size: 0.6em;
     color: #333;
     margin: 0 0 4px 0;
+    text-align: center; /* 备注居中 */
 }
 </style>
 
-<h2>Alumni</h2>
+<h2 style="text-align:center">Alumni</h2> <!-- 标题居中 -->
 <p class="alumni-note">* This is a partial list.</p>
 
 <table class="alumni-table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Year</th>
-            <th>Thesis</th>
-            <th>Current Position</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <div class="name-with-avatar">
-                    <img src="pic_student/yupei.jpg" alt="Yupei Lin" class="avatar">
-                    <a href="https://yupeilin2388.github.io/">Yupei Lin</a>
-                </div>
-            </td>
-            <td>2025</td>
-            <td>Controlled Content Generation</td>
-            <td>Ph.D@SYSU</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="name-with-avatar">
-                    <img src="pic_student/yexing.jpg" alt="Yexing Song" class="avatar">
-                    <a href="https://songyxing.github.io/">Yexing Song</a>
-                </div>
-            </td>
-            <td>2025</td>
-            <td>Video Super-Resolution</td>
-            <td>Tencent</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="name-with-avatar">
-                    <img src="pic_student/cidan.png" alt="Cidan Shi" class="avatar">
-                    <a href="https://cidanshi.github.io/">Cidan Shi</a>
-                </div>
-            </td>
-            <td>2025</td>
-            <td>Image De-Raining & Fusion</td>
-            <td>Guangri Co., LTD.</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="name-with-avatar">
-                    <img src="pic_student/junyang.jpg" alt="Junyang Chen" class="avatar">
-                    <a href="https://jychen9811.github.io/">Junyang Chen</a>
-                </div>
-            </td>
-            <td>2024</td>
-            <td>Virtual Try-on</td>
-            <td>Ph.D@NJUST</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="name-with-avatar">
-                    <img src="pic_student/lihuang.jpg" alt="Lihuang Fang" class="avatar">
-                    <a href="https://ieeexplore.ieee.org/author/37090056422">Lihuang Fang</a>
-                </div>
-            </td>
-            <td>2024</td>
-            <td>Hyperspectral Fusion</td>
-            <td>Master@SUSTech</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="name-with-avatar">
-                    <img src="pic_student/stu.png" alt="Junhong Gong" class="avatar">
-                    Junhong Gong
-                </div>
-            </td>
-            <td>2024</td>
-            <td>Low-light Enhancement</td>
-            <td>Digital Guangdong</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="name-with-avatar">
-                    <img src="pic_student/stu.png" alt="Haoyu Zhong" class="avatar">
-                    Haoyu Zhong
-                </div>
-            </td>
-            <td>2023</td>
-            <td>Image Super-Resolution</td>
-            <td>Xiaomi</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="name-with-avatar">
-                    <img src="pic_student/lihao.jpg" alt="Hao Li" class="avatar">
-                    <a href="https://house-leo.github.io/">Hao Li</a>
-                </div>
-            </td>
-            <td>2023</td>
-            <td>Image Processing</td>
-            <td>Post Doc@SYSU</td>
-        </tr>
-    </tbody>
-</table>
+<thead>
+<tr>
+    <th>Photo</th>
+    <th>Name & Info</th>
+    <th>Current Position</th>
+</tr>
+</thead>
+<tbody>
 
+<tr>
+    <td><img src="pic_student/yupei.jpg" alt="Yupei Lin" class="avatar"></td>
+    <td class="alumni-combo">
+        <a href="https://yupeilin2388.github.io/">Yupei Lin</a>
+        <span class="alumni-year">2025</span><br>
+        Controlled Content Generation
+    </td>
+    <td>Ph.D@SYSU</td>
+</tr>
+
+<tr>
+    <td><img src="pic_student/yexing.jpg" alt="Yexing Song" class="avatar"></td>
+    <td class="alumni-combo">
+        <a href="https://songyxing.github.io/">Yexing Song</a>
+        <span class="alumni-year">2025</span><br>
+        Video Super-Resolution
+    </td>
+    <td>Tencent</td>
+</tr>
+
+<tr>
+    <td><img src="pic_student/cidan.png" alt="Cidan Shi" class="avatar"></td>
+    <td class="alumni-combo">
+        <a href="https://cidanshi.github.io/">Cidan Shi</a>
+        <span class="alumni-year">2025</span><br>
+        Image De-Raining & Fusion
+    </td>
+    <td>Guangri Co., LTD.</td>
+</tr>
+
+<tr>
+    <td><img src="pic_student/junyang.jpg" alt="Junyang Chen" class="avatar"></td>
+    <td class="alumni-combo">
+        <a href="https://jychen9811.github.io/">Junyang Chen</a>
+        <span class="alumni-year">2024</span><br>
+        Virtual Try-on
+    </td>
+    <td>Ph.D@NJUST</td>
+</tr>
+
+<tr>
+    <td><img src="pic_student/lihuang.jpg" alt="Lihuang Fang" class="avatar"></td>
+    <td class="alumni-combo">
+        <a href="https://ieeexplore.ieee.org/author/37090056422">Lihuang Fang</a>
+        <span class="alumni-year">2024</span><br>
+        Hyperspectral Fusion
+    </td>
+    <td>Master@SUSTech</td>
+</tr>
+
+<tr>
+    <td><img src="pic_student/stu.png" alt="Junhong Gong" class="avatar"></td>
+    <td class="alumni-combo">
+        Junhong Gong <span class="alumni-year">2024</span><br>
+        Low-light Enhancement
+    </td>
+    <td>Digital Guangdong</td>
+</tr>
+
+<tr>
+    <td><img src="pic_student/stu.png" alt="Haoyu Zhong" class="avatar"></td>
+    <td class="alumni-combo">
+        Haoyu Zhong <span class="alumni-year">2023</span><br>
+        Image Super-Resolution
+    </td>
+    <td>Xiaomi</td>
+</tr>
+
+<tr>
+    <td><img src="pic_student/lihao.jpg" alt="Hao Li" class="avatar"></td>
+    <td class="alumni-combo">
+        <a href="https://house-leo.github.io/">Hao Li</a>
+        <span class="alumni-year">2023</span><br>
+        Image Processing
+    </td>
+    <td>Post Doc@SYSU</td>
+</tr>
+
+</tbody>
+</table>
 
 <br /> 
 
