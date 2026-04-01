@@ -320,7 +320,6 @@ Junpeng Tan*, <b>Yukai Shi</b>, Zhijing Yang, Caizhen Wen, Liang Lin <br />
 </li>
 </ul>
 
-
 <head>
     <meta charset="UTF-8">
     <title>Alumni List</title>
@@ -331,27 +330,27 @@ Junpeng Tan*, <b>Yukai Shi</b>, Zhijing Yang, Caizhen Wen, Liang Lin <br />
             padding: 20px;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 1.8em; /* 缩小标题 */
             margin: 0 0 10px 0;
             font-weight: bold;
         }
         .note {
-            font-size: 1.2em;
+            font-size: 1em; /* 缩小备注 */
             margin: 0 0 20px 0;
             color: #333;
         }
 
-        /* 表格样式 */
+        /* 表格样式 —— 整体缩小 */
         .alumni-table {
-            width: 100%;
+            width: 85%; /* 缩小表格宽度 */
             border-collapse: collapse;
             border: 1px solid #ccc;
-            font-size: 1.3em;
+            font-size: 1em; /* 缩小整体字号 */
         }
         .alumni-table th,
         .alumni-table td {
             border: 1px solid #ccc;
-            padding: 12px 15px;
+            padding: 8px 10px; /* 缩小单元格内边距 */
             text-align: center;
             vertical-align: middle;
         }
@@ -359,26 +358,26 @@ Junpeng Tan*, <b>Yukai Shi</b>, Zhijing Yang, Caizhen Wen, Liang Lin <br />
             background-color: #f0f0f0;
             font-weight: bold;
         }
-        /* 姓名链接样式（蓝色下划线） */
+        /* 姓名链接样式 */
         .alumni-table a {
             color: #0000EE;
             text-decoration: underline;
-            margin-left: 10px;
+            margin-left: 8px;
         }
-        /* 头像样式 */
+        /* 头像缩小 */
         .avatar {
-            width: 60px;
-            height: 60px;
+            width: 45px;    /* 缩小头像 */
+            height: 45px;
             border-radius: 50%;
             object-fit: cover;
             vertical-align: middle;
         }
-        /* 头像+姓名 同一行布局 */
+        /* 头像+姓名 布局 */
         .name-with-avatar {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 8px;
         }
     </style>
 </head>
