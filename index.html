@@ -320,75 +320,172 @@ Junpeng Tan*, <b>Yukai Shi</b>, Zhijing Yang, Caizhen Wen, Liang Lin <br />
 </li>
 </ul>
 
-<h2>Alumni</h2>
-<p><font size="1"> <b>*</b> This is a partial list.</font></p>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
-.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
-  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
-  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-pl5h{font-family:Georgia, serif !important;font-size:15px;text-align:center;vertical-align:top}
-.tg .tg-znrg{border-color:inherit;font-family:Georgia, serif !important;font-size:15px;text-align:center;vertical-align:top}
-</style>
-<table class="tg"><thead>
-  <tr>
-    <th class="tg-znrg">Name</th>
-    <th class="tg-znrg">Year</th>
-    <th class="tg-znrg">Thesis/Project</th>
-    <th class="tg-znrg">Currrent Position</th>
-  </tr></thead>
-<tbody>
-  <tr>
-    <td class="tg-znrg"><a href="https://yupeilin2388.github.io/">Yupei Lin</a></td>
-    <td class="tg-znrg">2025</td>
-    <td class="tg-znrg">Controlled Content Generation</td>
-    <td class="tg-znrg">Ph.D@SYSU</td>
-  </tr>
-  <tr>
-    <td class="tg-znrg"><a href="https://songyxing.github.io/">Yexing Song</a></td>
-    <td class="tg-znrg">2025</td>
-    <td class="tg-znrg">Video Super-Resolution</td>
-    <td class="tg-znrg">Tencent</td>
-  </tr>
-  <tr>
-    <td class="tg-znrg"><a href="https://cidanshi.github.io/">Cidan Shi</a></td>
-    <td class="tg-znrg">2025</td>
-    <td class="tg-znrg">Image De-Raining and Fusion</td>
-    <td class="tg-znrg">Research Institute, Guangri Co., LTD. </td>
-  </tr>
-  <tr>
-    <td class="tg-znrg"><a href="https://jychen9811.github.io/">Junyang Chen</a></td>
-    <td class="tg-znrg">2024</td>
-    <td class="tg-znrg">Semantically-Guided Virtual Try-on</td>
-    <td class="tg-znrg">Ph.D@NJUST</td>
-  </tr>
-  <tr>
-    <td class="tg-pl5h">Lihuang Fang</td>
-    <td class="tg-pl5h">2024</td>
-    <td class="tg-pl5h">Hyperspectral Data Fusion</td>
-    <td class="tg-pl5h">Master@SUSTech</td>
-  </tr>
-  <tr>
-    <td class="tg-pl5h">Junhong Gong</td>
-    <td class="tg-pl5h">2024</td>
-    <td class="tg-pl5h">Reference-free Low-light Enhancement</td>
-    <td class="tg-pl5h">Digital Guangdong Co., Ltd.</td>
-  </tr>
-  <tr>
-    <td class="tg-pl5h">Haoyu Zhong</td>
-    <td class="tg-pl5h">2023</td>
-    <td class="tg-pl5h">Real-world Image Super-Resolution</td>
-    <td class="tg-pl5h">Xiaomi Corporation</td>
-  </tr>
-  <tr>
-    <td class="tg-pl5h"> <a href="https://house-leo.github.io/">Hao Li</a></td>
-    <td class="tg-pl5h">2023</td>
-    <td class="tg-pl5h">Real-world Image Processing</td>
-    <td class="tg-pl5h">Ph.D@NJUST</td>
-  </tr>
-</tbody>
-</table>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alumni List</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+        .note {
+            font-size: 1.2em;
+            margin: 0 0 20px 0;
+            color: #333;
+        }
+
+        /* 表格样式 */
+        .alumni-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+            font-size: 1.3em;
+        }
+        .alumni-table th,
+        .alumni-table td {
+            border: 1px solid #ccc;
+            padding: 12px 15px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .alumni-table th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        /* 姓名链接样式（蓝色下划线） */
+        .alumni-table a {
+            color: #0000EE;
+            text-decoration: underline;
+            margin-left: 10px;
+        }
+        /* 头像样式 */
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+        /* 头像+姓名 同一行布局 */
+        .name-with-avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alumni</h1>
+    <p class="note">* This is a partial list.</p>
+
+    <table class="alumni-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Thesis/Project</th>
+                <th>Current Position</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="name-with-avatar">
+                        <img src="avatar_yupei_lin.jpg" alt="Yupei Lin" class="avatar">
+                        <a href="#">Yupei Lin</a>
+                    </div>
+                </td>
+                <td>2025</td>
+                <td>Controlled Content Generation</td>
+                <td>Ph.D@SYSU</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="name-with-avatar">
+                        <img src="avatar_yexing_song.jpg" alt="Yexing Song" class="avatar">
+                        <a href="#">Yexing Song</a>
+                    </div>
+                </td>
+                <td>2025</td>
+                <td>Video Super-Resolution</td>
+                <td>Tencent</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="name-with-avatar">
+                        <img src="avatar_cidan_shi.jpg" alt="Cidan Shi" class="avatar">
+                        <a href="#">Cidan Shi</a>
+                    </div>
+                </td>
+                <td>2025</td>
+                <td>Image De-Raining and Fusion</td>
+                <td>Research Institute, Guangri Co., LTD.</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="name-with-avatar">
+                        <img src="avatar_junyang_chen.jpg" alt="Junyang Chen" class="avatar">
+                        <a href="#">Junyang Chen</a>
+                    </div>
+                </td>
+                <td>2024</td>
+                <td>Semantically-Guided Virtual Try-on</td>
+                <td>Ph.D@NJUST</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="name-with-avatar">
+                        <img src="avatar_lihuang_fang.jpg" alt="Lihuang Fang" class="avatar">
+                        Lihuang Fang
+                    </div>
+                </td>
+                <td>2024</td>
+                <td>Hyperspectral Data Fusion</td>
+                <td>Master@SUSTech</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="name-with-avatar">
+                        <img src="avatar_junhong_gong.jpg" alt="Junhong Gong" class="avatar">
+                        Junhong Gong
+                    </div>
+                </td>
+                <td>2024</td>
+                <td>Reference-free Low-light Enhancement</td>
+                <td>Digital Guangdong Co., Ltd.</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="name-with-avatar">
+                        Haoyu Zhong
+                    </div>
+                </td>
+                <td>2023</td>
+                <td>Real-world Image Super-Resolution</td>
+                <td>Xiaomi Corporation</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="name-with-avatar">
+                        <img src="avatar_hao_li.jpg" alt="Hao Li" class="avatar">
+                        <a href="#">Hao Li</a>
+                    </div>
+                </td>
+                <td>2023</td>
+                <td>Real-world Image Processing</td>
+                <td>Ph.D@NJUST</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
 
 
 <br /> 
