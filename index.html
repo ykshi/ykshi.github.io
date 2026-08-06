@@ -62,61 +62,7 @@ body {
   padding: 32px 40px 48px;
   background: var(--color-surface);
   box-shadow: 0 2px 20px rgba(0,0,0,.08);
-  position: relative;
-  z-index: 1;
 }
-
-/* ============================
-   Side Margins Decorative Layer
-   "The Dot and the Line" — minimal ink geometry:
-   dots, straight lines, and the line bending into curves
-   (subtle, fading in / out at random)
-   ============================ */
-.bg-decor {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.bg-shape {
-  position: absolute;
-  opacity: 0;
-  transition: opacity 1.4s ease-in-out;
-  will-change: opacity;
-}
-
-.bg-shape svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-/* the dot — a solid ink point */
-.bg-shape.dot svg circle {
-  fill: #2b2b2b;
-}
-
-/* the line — a thin straight stroke */
-.bg-shape.iline svg line,
-/* the line, wooing the dot — bending into curves / loops */
-.bg-shape.icurve svg path {
-  fill: none;
-  stroke: #2b2b2b;
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-/* positions & sizes */
-.bg-shape.dot.l1    { top: 16%;  left: 3%;   width: 30px;  height: 30px; }
-.bg-shape.iline.l2  { top: 50%;  left: 2%;   width: 96px;  height: 26px; }
-.bg-shape.icurve.l3 { top: 78%;  left: 4%;   width: 120px; height: 120px; }
-.bg-shape.dot.r1    { top: 12%;  right: 4%;  width: 36px;  height: 36px; }
-.bg-shape.iline.r2  { top: 48%;  right: 2%;  width: 110px; height: 28px; }
-.bg-shape.icurve.r3 { top: 76%;  right: 5%;  width: 110px; height: 110px; }
 
 /* ============================
    Header / Profile
@@ -485,13 +431,6 @@ body {
   line-height: 1.4;
 }
 
-.alumni-year-header .count {
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 400;
-  color: var(--color-text-muted);
-}
-
 .alumni-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -615,29 +554,6 @@ body {
 }
 
 /* ============================
-   Footer
-   ============================ */
-.footer {
-  margin-top: 52px;
-  padding-top: 20px;
-  border-top: 1px solid var(--color-border);
-  text-align: right;
-  font-size: 0.82rem;
-  color: var(--color-text-muted);
-}
-
-.footer .stat-count {
-  color: var(--color-text);
-  font-weight: 500;
-  font-size: 0.84rem;
-}
-
-.footer .stat-count #busuanzi_value_site_pv {
-  color: var(--color-accent);
-  font-weight: 700;
-}
-
-/* ============================
    Responsive
    ============================ */
 @media (max-width: 640px) {
@@ -704,17 +620,6 @@ body {
 </style>
 </head>
 <body>
-
-<div class="bg-decor" aria-hidden="true">
-  <!-- left side: a dot, a straight line, and the line bending into a wave -->
-  <span class="bg-shape dot l1"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="11"/></svg></span>
-  <span class="bg-shape iline l2"><svg viewBox="0 0 120 30"><line x1="6" y1="24" x2="114" y2="6"/></svg></span>
-  <span class="bg-shape icurve l3"><svg viewBox="0 0 120 120"><path d="M14 106 C 14 18, 106 18, 106 60 S 44 104, 106 104"/></svg></span>
-  <!-- right side: a dot, a straight line, and the line tying itself into a loop -->
-  <span class="bg-shape dot r1"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="13"/></svg></span>
-  <span class="bg-shape iline r2"><svg viewBox="0 0 130 30"><line x1="6" y1="6" x2="124" y2="24"/></svg></span>
-  <span class="bg-shape icurve r3"><svg viewBox="0 0 120 120"><path d="M14 60 C 40 10, 80 10, 106 60 C 80 110, 40 110, 14 60 Z"/></svg></span>
-</div>
 
 <div class="container">
 
@@ -1226,7 +1131,7 @@ body {
       </li>
       <li>
         <span class="award-year">23–25</span>
-        <span class="award-name">广东工业大学年度教学优秀奖（2023、2024、2025连续三年）</span>
+        <span class="award-name">广东工业大学年度教学优秀奖</span>
       </li>
     </ul>
   </section>
@@ -1265,7 +1170,7 @@ body {
 
     <!-- 2026 -->
     <div class="alumni-group">
-      <h3 class="alumni-year-header">2026 <span class="count">· 4 graduates</span></h3>
+      <h3 class="alumni-year-header">2026</h3>
       <div class="alumni-grid">
 
         <div class="alumni-card">
@@ -1317,7 +1222,7 @@ body {
 
     <!-- 2025 -->
     <div class="alumni-group">
-      <h3 class="alumni-year-header">2025 <span class="count">· 3 graduates</span></h3>
+      <h3 class="alumni-year-header">2025</h3>
       <div class="alumni-grid">
 
         <div class="alumni-card">
@@ -1358,7 +1263,7 @@ body {
 
     <!-- 2024 -->
     <div class="alumni-group">
-      <h3 class="alumni-year-header">2024 <span class="count">· 3 graduates</span></h3>
+      <h3 class="alumni-year-header">2024</h3>
       <div class="alumni-grid">
 
         <div class="alumni-card">
@@ -1399,7 +1304,7 @@ body {
 
     <!-- 2023 -->
     <div class="alumni-group">
-      <h3 class="alumni-year-header">2023 <span class="count">· 2 graduates</span></h3>
+      <h3 class="alumni-year-header">2023</h3>
       <div class="alumni-grid">
 
         <div class="alumni-card">
@@ -1429,38 +1334,7 @@ body {
 
   </section>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <span class="stat-count">
-      <span id="busuanzi_container_site_pv">总访问量 <span id="busuanzi_value_site_pv">0</span> 次</span>
-    </span>
-  </footer>
-
 </div><!-- /container -->
-
-<!-- 不蒜子：访问人数统计（部署后自动生效，无需后端） -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-<!-- 装饰层线条形状的随机出现 / 消失 -->
-<script>
-  (function () {
-    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var shapes = document.querySelectorAll('.bg-decor .bg-shape');
-    if (reduce || !shapes.length) return; // 尊重“减少动效”偏好：保持隐藏
-    function flicker(el) {
-      var showMs = 1400 + Math.random() * 4200;  // 可见 1.4–5.6s
-      var hideMs = 900 + Math.random() * 5200;   // 隐藏 0.9–6.1s
-      el.style.opacity = (0.14 + Math.random() * 0.20).toFixed(2); // 0.14–0.34
-      setTimeout(function () {
-        el.style.opacity = 0;
-        setTimeout(function () { flicker(el); }, hideMs);
-      }, showMs);
-    }
-    shapes.forEach(function (el, i) {
-      setTimeout(function () { flicker(el); }, Math.random() * 3500 + i * 250);
-    });
-  })();
-</script>  
 
 </body>
 </html>
